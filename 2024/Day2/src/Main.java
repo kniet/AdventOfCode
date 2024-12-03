@@ -15,7 +15,7 @@ public class Main {
         int resultPart1 = 0;
         for (String string : input) {
             List<Integer> result = Arrays.stream(string.split(" "))
-                    .mapToInt(Integer::parseInt).boxed().toList();
+                    .map(Integer::parseInt).collect(Collectors.toList());
 
             if (part1(result)) {
                 resultPart1++;
